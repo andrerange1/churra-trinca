@@ -1,6 +1,4 @@
-﻿using ChurrasTrinca.Domain.Enums;
-
-namespace ChurrasTrinca.Domain.Entities
+﻿namespace ChurrasTrinca.Domain
 {
     public class Churrasco
     {

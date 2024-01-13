@@ -1,8 +1,7 @@
-﻿using ChurrasTrinca.API;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
-namespace ChurrasTrinca.Api.Controllers
+namespace ChurrasTrinca.Api
 {
     [ApiController]
     [Route("[controller]")]

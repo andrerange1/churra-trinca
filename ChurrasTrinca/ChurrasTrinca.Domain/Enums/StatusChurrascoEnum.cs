@@ -1,4 +1,4 @@
-﻿namespace ChurrasTrinca.Domain.Enums
+﻿namespace ChurrasTrinca.Domain
 {
     public enum StatusChurrascoEnum
     {

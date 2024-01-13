@@ -1,7 +1,6 @@
-﻿using ChurrasTrinca.Domain.Entities;
-using ChurrasTrinca.Domain.Interfaces;
+﻿using ChurrasTrinca.Domain;
 
-namespace ChurrasTrinca.Infra.Repository
+namespace ChurrasTrinca.Infra
 {
     public class ChurrascoRepository : IChurrascoRepository
     {

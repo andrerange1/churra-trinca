@@ -1,4 +1,4 @@
-﻿namespace ChurrasTrinca.Domain.Entities
+﻿namespace ChurrasTrinca.Domain
 {
     public class Pessoa
     {
