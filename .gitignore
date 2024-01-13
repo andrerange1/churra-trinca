@@ -22,3 +22,10 @@ obj/
 
 ## Diretório de publicação
 pub/
+/ChurrasTrinca/.vs/ChurrasTrinca/FileContentIndex
+/ChurrasTrinca/ChurrasTrinca.API/obj/ChurrasTrinca.API.csproj.nuget.dgspec.json
+/ChurrasTrinca/.vs/ChurrasTrinca/v17/.suo
+*.bin
+*.v2
+/ChurrasTrinca/ChurrasTrinca.API/obj/project.nuget.cache
+/ChurrasTrinca/ChurrasTrinca.sln
