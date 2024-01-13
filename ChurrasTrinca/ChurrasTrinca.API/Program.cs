@@ -1,13 +1,27 @@
 using ChurrasTrinca.Domain;
+using System.Reflection;
+using ChurrasTrinca.Contracts;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "Churras Api",
+        Version = "v1",
+        Description = "API do Churrasco"
+    });
+    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+});
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddSingleton(new AutoMapperConfig().Config().CreateMapper());
 
 builder.Services.AddScoped<IChurrascoService, ChurrascoService>();
 builder.Services.AddScoped<IChurrascoRepository, IChurrascoRepository>();
