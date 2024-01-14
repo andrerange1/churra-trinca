@@ -37,7 +37,7 @@
             Random random2 = new Random();
 
             int numeroAleatorio = random.Next(1, 10);
-            int numPessoa = random2.Next(1, 100);
+            int numPessoa = random2.Next(2, 50);
 
             Nome = nomes[numPessoa];
             ComeCarne = numeroAleatorio > 4 ? true : false;

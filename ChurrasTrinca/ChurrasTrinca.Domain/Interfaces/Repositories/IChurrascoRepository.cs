@@ -1,4 +1,6 @@
-﻿namespace ChurrasTrinca.Domain
+﻿using ChurrasTrinca.Domain.Entities;
+
+namespace ChurrasTrinca.Domain.Interfaces.Repositories
 {
     public interface IChurrascoRepository
     {

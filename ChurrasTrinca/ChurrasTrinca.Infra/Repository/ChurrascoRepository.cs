@@ -1,19 +1,13 @@
-﻿using ChurrasTrinca.Domain;
+﻿using ChurrasTrinca.Domain.Entities;
+using ChurrasTrinca.Domain.Interfaces.Repositories;
 
-namespace ChurrasTrinca.Infra
+namespace ChurrasTrinca.Infra.Repository
 {
     public class ChurrascoRepository : IChurrascoRepository
     {
-        private readonly IChurrascoRepository _repository;
-
-        public ChurrascoRepository(IChurrascoRepository repository)
-        {
-            _repository = repository;    
-        }
-
         public Task<List<Churrasco>> GetAllAsync()
         {
-            return _repository.GetAllAsync();
+            return null;
         }
 
         public Churrasco GetAsync()
@@ -23,7 +17,8 @@ namespace ChurrasTrinca.Infra
 
         private Churrasco GetMockChurrasco()
         {
-            return new Churrasco().GerarChurrascoAleatorio();
+            var novo = new Churrasco().GerarChurrascoAleatorio();
+            return novo;
         }
     }
 }

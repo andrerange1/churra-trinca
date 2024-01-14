@@ -1,6 +1,10 @@
 using ChurrasTrinca.Domain;
 using System.Reflection;
 using ChurrasTrinca.Contracts;
+using ChurrasTrinca.Domain.Interfaces.Services;
+using ChurrasTrinca.Domain.Interfaces.Repositories;
+using ChurrasTrinca.Infra.Repository;
+using ChurrasTrinca.App;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,14 +21,14 @@ builder.Services.AddSwaggerGen(options =>
         Description = "API do Churrasco"
     });
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddSingleton(new AutoMapperConfig().Config().CreateMapper());
 
+builder.Services.AddScoped<IChurrascoRepository, ChurrascoRepository>();
 builder.Services.AddScoped<IChurrascoService, ChurrascoService>();
-builder.Services.AddScoped<IChurrascoRepository, IChurrascoRepository>();
+builder.Services.AddScoped<IChurrascoAppService, ChurrascoAppService>();
 
 var app = builder.Build();
 

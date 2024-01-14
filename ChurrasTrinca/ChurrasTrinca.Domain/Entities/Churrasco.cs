@@ -1,4 +1,4 @@
-﻿namespace ChurrasTrinca.Domain
+﻿namespace ChurrasTrinca.Domain.Entities
 {
     public class Churrasco
     {
@@ -15,15 +15,21 @@
             DataCriacao = DateTime.UtcNow;
             DataChurrasco = DataCriacao.AddDays(10);
 
-            Status = Pessoas.Count >= 7 ? StatusChurrascoEnum.Agendado : StatusChurrascoEnum.Pendente;
-
             Random numPessoas = new Random();  
             
             int numeroAleatorio = numPessoas.Next(1, 10);
+
+            if(Pessoas == null)
+            {
+                Pessoas = new List<Pessoa>();
+            }
+
             for (int i = 0; i < numeroAleatorio; i++)
             {
                 Pessoas.Add(new Pessoa().GerarPessoa());
             }
+
+            Status = Pessoas.Count >= 7 ? StatusChurrascoEnum.Agendado : StatusChurrascoEnum.Pendente;
 
             return this;
         }

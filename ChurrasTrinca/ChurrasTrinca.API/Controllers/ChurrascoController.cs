@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ChurrasTrinca.App;
+using ChurrasTrinca.Contracts;
+using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace ChurrasTrinca.Api
@@ -12,11 +14,11 @@ namespace ChurrasTrinca.Api
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly ILogger<ChurrascoController> _logger;
+        private readonly IChurrascoAppService _appService;
 
-        public ChurrascoController(ILogger<ChurrascoController> logger)
+        public ChurrascoController(IChurrascoAppService appService)
         {
-            _logger = logger;
+            _appService = appService;
         }
 
         /// <summary>
@@ -36,10 +38,10 @@ namespace ChurrasTrinca.Api
         /// </summary>
         /// <returns>Objeto Churrasco</returns>
         [HttpGet]
-        [ProducesResponseType(typeof(List<string>), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(ChurrascoResponse), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetAsync()
         {
-            var result = Summaries;
+            var result = _appService.GetAsync();
             return Ok(result);
         }
     }
