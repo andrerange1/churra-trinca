@@ -7,8 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ChurrasTrinca.Contracts\ChurrasTrinca.Contracts.csproj" />
-    <ProjectReference Include="..\ChurrasTrinca.Domain\ChurrasTrinca.Domain.csproj" />
+    <ProjectReference Include="..\ChurrasTrinca.App\2.Bbq.App.csproj" />
   </ItemGroup>
 
 </Project>

@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ChurrasTrinca.Domain\ChurrasTrinca.Domain.csproj" />
+    <ProjectReference Include="..\ChurrasTrinca.Domain\4.Bbq.Domain.csproj" />
   </ItemGroup>
 
 </Project>

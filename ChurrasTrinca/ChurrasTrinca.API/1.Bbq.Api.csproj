@@ -13,9 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ChurrasTrinca.App\ChurrasTrinca.App.csproj" />
-    <ProjectReference Include="..\ChurrasTrinca.Contracts\ChurrasTrinca.Contracts.csproj" />
-    <ProjectReference Include="..\ChurrasTrinca.Infra\ChurrasTrinca.Infra.csproj" />
+    <ProjectReference Include="..\ChurrasTrinca.App\2.Bbq.App.csproj" />
+    <ProjectReference Include="..\ChurrasTrinca.Contracts\3.Bbq.Contracts.csproj" />
+    <ProjectReference Include="..\ChurrasTrinca.Infra\5.Bbq.Infra.csproj" />
   </ItemGroup>
 
 </Project>

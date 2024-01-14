@@ -38,7 +38,7 @@ namespace ChurrasTrinca.Api
         /// </summary>
         /// <returns>Objeto Churrasco</returns>
         [HttpGet]
-        [ProducesResponseType(typeof(ChurrascoResponse), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(BbqResponse), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetAsync()
         {
             var result = _appService.GetAsync();
