@@ -4,6 +4,6 @@ namespace ChurrasTrinca.App
 {
     public interface IChurrascoAppService
     {
-        public ChurrascoResponse GetAsync();
+        public BbqResponse GetAsync();
     }
 }

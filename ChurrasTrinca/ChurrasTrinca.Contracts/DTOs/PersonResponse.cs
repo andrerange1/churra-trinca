@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChurrasTrinca.Contracts
 {
-    public class PessoaResponse
+    public class PersonResponse
     {
         public string Nome { get; set; }
         public bool ComeCarne { get; set; }

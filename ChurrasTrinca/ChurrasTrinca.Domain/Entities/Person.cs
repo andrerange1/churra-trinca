@@ -1,9 +1,13 @@
-﻿namespace ChurrasTrinca.Domain
+﻿using System.ComponentModel;
+
+namespace ChurrasTrinca.Domain
 {
-    public class Pessoa
+    public class Person
     {
-        public string Nome { get; set; }
-        public bool ComeCarne { get; set; }
+        public string Name { get; set; }
+        public bool IsVegetarian { get; set; }
+        public bool IsCoOwner { get; set; }
+        public IEnumerable<Invite> Invites { get; set; }
 
 
         List<string> nomes = new List<string>
@@ -28,10 +32,10 @@
             "Oliver", "Paloma", "Pietro", "Rafaelly", "Ravi"
         };
 
-        public Pessoa() {
+        public Person() {
         }
 
-        public Pessoa GerarPessoa()
+        public Person GerarPessoa()
         {
             Random random = new Random();
             Random random2 = new Random();
@@ -39,8 +43,8 @@
             int numeroAleatorio = random.Next(1, 10);
             int numPessoa = random2.Next(2, 50);
 
-            Nome = nomes[numPessoa];
-            ComeCarne = numeroAleatorio > 4 ? true : false;
+            Name = nomes[numPessoa];
+            IsVegetarian = numeroAleatorio < 4 ? true : false;
             return this;
         }
     }

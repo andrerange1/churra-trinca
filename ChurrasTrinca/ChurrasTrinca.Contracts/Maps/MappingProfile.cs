@@ -9,10 +9,10 @@ namespace ChurrasTrinca.Contracts
     {
         public MappingProfile()
         {
-            CreateMap<Churrasco, ChurrascoResponse>().ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status.ToString()));
+            CreateMap<Bbq, BbqResponse>().ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status.ToString()));
 
 
-            CreateMap<PessoaResponse, Pessoa>().ReverseMap();
+            CreateMap<PersonResponse, Person>().ReverseMap();
         }
     }
 }

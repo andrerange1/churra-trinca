@@ -15,10 +15,10 @@ namespace ChurrasTrinca.App
             _mapper = mapper;
         }
 
-        public ChurrascoResponse GetAsync()
+        public BbqResponse GetAsync()
         {
             var churrasco = _service.GetAsync();
-            return _mapper.Map<ChurrascoResponse>(churrasco);
+            return _mapper.Map<BbqResponse>(churrasco);
         }
     }
 }

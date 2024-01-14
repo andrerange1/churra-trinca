@@ -12,7 +12,7 @@ namespace ChurrasTrinca.Domain
         {
             _repository = repository;
         }
-        public Churrasco GetAsync()
+        public Bbq GetAsync()
         {
             return _repository.GetAsync();
         }

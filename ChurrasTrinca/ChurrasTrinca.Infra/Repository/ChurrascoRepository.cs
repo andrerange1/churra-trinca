@@ -5,19 +5,19 @@ namespace ChurrasTrinca.Infra.Repository
 {
     public class ChurrascoRepository : IChurrascoRepository
     {
-        public Task<List<Churrasco>> GetAllAsync()
+        public Task<List<Bbq>> GetAllAsync()
         {
             return null;
         }
 
-        public Churrasco GetAsync()
+        public Bbq GetAsync()
         {
             return GetMockChurrasco();
         }
 
-        private Churrasco GetMockChurrasco()
+        private Bbq GetMockChurrasco()
         {
-            var novo = new Churrasco().GerarChurrascoAleatorio();
+            var novo = new Bbq().GerarChurrascoAleatorio();
             return novo;
         }
     }
